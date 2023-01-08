@@ -25,7 +25,7 @@ namespace Trainspotting.Services
             return _currentData;
         }
 
-        public List<TrainData> UpdateSeats(Seat updatedSeat)
+        public List<TrainData> UpdateSeats(TrainData updatedSeat)
         {
 
 

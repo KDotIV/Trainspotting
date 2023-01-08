@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Trainspotting.Helpers;
 using Trainspotting.Models;
 
 namespace Trainspotting.Services
@@ -36,7 +37,8 @@ namespace Trainspotting.Services
                         continue;
                     }
 
-                    TrainData newTrainData = new TrainData(entries[0], entries[1], newSeats);
+
+                    TrainData newTrainData = new TrainData(HelperFunctions.GenerateID(),entries[0], entries[1], newSeats);
 
                     data.Add(newTrainData);
                 }
@@ -64,8 +66,10 @@ namespace Trainspotting.Services
 
             for (int i = 0; i < midPoint; i++)
             {
+                
                 Seat newAisleSeat = new Seat
                 {
+                    seatNum= i,
                     Occupied = false,
                     SeatType = SeatType.Aisle
                 };
@@ -76,6 +80,7 @@ namespace Trainspotting.Services
             {
                 Seat newWindowSeat = new Seat
                 {
+                    seatNum= i,
                     Occupied = false,
                     SeatType = SeatType.Window
                 };

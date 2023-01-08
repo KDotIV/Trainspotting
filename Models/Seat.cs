@@ -2,6 +2,7 @@
 {
     public class Seat
     {
+        public int seatNum { get; set; }
         public bool Occupied { get; set; }
         public SeatType SeatType { get; set; }
     }
