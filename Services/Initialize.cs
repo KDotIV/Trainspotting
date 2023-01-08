@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Trainspotting.Models;
 
 namespace Trainspotting.Services
@@ -25,9 +27,10 @@ namespace Trainspotting.Services
             return _currentData;
         }
 
-        public List<TrainData> UpdateSeats(TrainData updatedSeat)
+        public List<TrainData> UpdateSeats(TrainData updatedData)
         {
 
+            _currentData[_currentData.IndexOf(updatedData)] = updatedData;
 
             return _currentData;
         }

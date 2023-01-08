@@ -13,7 +13,7 @@ namespace Trainspotting.Services
 
             foreach (var train in trainData)
             {
-                Console.WriteLine($"[{trainData.IndexOf(train) + 1}] Destination: {train.Destination} - Departing: {train.DepatureTime} - Available Seats: {train.Seats.Count}");
+                Console.WriteLine($"[{trainData.IndexOf(train) + 1}] Destination: {train.Destination} - Departing: {train.DepatureTime}");
             }
         }
 
@@ -77,7 +77,7 @@ namespace Trainspotting.Services
                 }
                 else if (windowInput == "n")
                 {
-                    Console.WriteLine("Exiting Booking...");
+                    Console.WriteLine("Restarting booking...");
                     return false;
                 }
             }
@@ -97,7 +97,7 @@ namespace Trainspotting.Services
                 }
                 else if (aisleInput == "n")
                 {
-                    Console.WriteLine("Exiting Booking..."); 
+                    Console.WriteLine("Restarting booking..."); 
                     return false;
                 }
             }

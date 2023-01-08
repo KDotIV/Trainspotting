@@ -20,7 +20,7 @@ namespace Trainspotting
             if (bookedSeat.Item2 == true)
             {
                 Console.WriteLine("Seat Booked...");
-                initialize.UpdateSeats(bookedSeat.Item1);
+                var newData = initialize.UpdateSeats(bookedSeat.Item1);
             }
         }
     }
